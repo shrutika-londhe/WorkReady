@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Slider</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        .category-btn {
+            border-radius: 20px;
+            padding: 5px 15px;
+            border: none;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .category-btn.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card .badge {
+            background-color: #f8f9fa;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .card .internship-badge {
+            background-color: #e9ecef;
+            color: black;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 5px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: auto;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-4">
+    <h2 class="text-center">Latest Internships on Internshala</h2>
+    <div class="text-center my-3">
+        <button class="category-btn active">Big brands</button>
+        <button class="category-btn">Work from home</button>
+        <button class="category-btn">Part-time</button>
+        <button class="category-btn">MBA</button>
+        <button class="category-btn">Engineering</button>
+        <button class="category-btn">Media</button>
+        <button class="category-btn">Design</button>
+        <button class="category-btn">Data Science</button>
+    </div>
+
+    <div id="internshipCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <span class="badge">Actively hiring</span>
+                            <h5 class="mt-2">SEO Intern</h5>
+                            <p>Sportskeeda</p>
+                            <p><i class="bi bi-house-door"></i> Work From Home</p>
+                            <p>₹ 10,000 /month</p>
+                            <p>6 Months</p>
+                            <span class="internship-badge">Internship</span>
+                            <a href="#" class="float-end">View details →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <span class="badge">Actively hiring</span>
+                            <h5 class="mt-2">SEO Intern</h5>
+                            <p>CollegeDekho.com</p>
+                            <p><i class="bi bi-geo-alt"></i> Gurgaon</p>
+                            <p>₹ 10,000 /month</p>
+                            <p>6 Months</p>
+                            <span class="internship-badge">Internship</span>
+                            <a href="#" class="float-end">View details →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <span class="badge">Actively hiring</span>
+                            <h5 class="mt-2">Field Sales</h5>
+                            <p>Freecharge Payments</p>
+                            <p><i class="bi bi-geo-alt"></i> Indore, Jharkhand</p>
+                            <p>₹ 20,000 /month</p>
+                            <p>6 Months</p>
+                            <span class="internship-badge">Internship</span>
+                            <a href="#" class="float-end">View details →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <span class="badge">Actively hiring</span>
+                            <h5 class="mt-2">Digital Marketing</h5>
+                            <p>CollegeDekho.com</p>
+                            <p><i class="bi bi-geo-alt"></i> Gurgaon</p>
+                            <p>₹ 10,000 /month</p>
+                            <p>4 Months</p>
+                            <span class="internship-badge">Internship</span>
+                            <a href="#" class="float-end">View details →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <span class="badge">Actively hiring</span>
+                            <h5 class="mt-2">Data Science Intern</h5>
+                            <p>Tech Mahindra</p>
+                            <p><i class="bi bi-house-door"></i> Work From Home</p>
+                            <p>₹ 15,000 /month</p>
+                            <p>5 Months</p>
+                            <span class="internship-badge">Internship</span>
+                            <a href="#" class="float-end">View details →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <span class="badge">Actively hiring</span>
+                            <h5 class="mt-2">Graphic Design</h5>
+                            <p>Adobe</p>
+                            <p><i class="bi bi-geo-alt"></i> Bangalore</p>
+                            <p>₹ 12,000 /month</p>
+                            <p>3 Months</p>
+                            <span class="internship-badge">Internship</span>
+                            <a href="#" class="float-end">View details →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3">
+                            <span class="badge">Actively hiring</span>
+                            <h5 class="mt-2">Marketing Intern</h5>
+                            <p>Amazon</p>
+                            <p><i class="bi bi-geo-alt"></i> Mumbai</p>
+                            <p>₹ 20,000 /month</p>
+                            <p>6 Months</p>
+                            <span class="internship-badge">Internship</span>
+                            <a href="#" class="float-end">View details →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#internshipCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#internshipCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+</div>
+
+<!-- Bootstrap JavaScript (Ensure this is included for the slider to work) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

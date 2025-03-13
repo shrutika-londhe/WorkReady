@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorkReady</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
+  />
+</head>
+<body>
+    {% load static %}
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="" width="30"> WorkReady
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <!-- Internships Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Internships</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Work from Home</a></li>
+                            <li><a class="dropdown-item" href="#">Internships in Bangalore</a></li>
+                            <li><a class="dropdown-item" href="#">Internships in Delhi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">View all internships</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Jobs Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Jobs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Software Jobs</a></li>
+                            <li><a class="dropdown-item" href="#">Marketing Jobs</a></li>
+                            <li><a class="dropdown-item" href="#">Finance Jobs</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Courses Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Courses <span class="badge bg-warning text-dark">OFFER</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#">Data Science</a></li>
+                            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <!-- Search Bar -->
+                <form class="d-flex search-bar">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  
+                </form>
+    
+                <!-- Login and Signup Buttons -->
+                <a href="#" class="btn btn-outline-primary ms-3">Login</a>
+                <a href="#" class="btn btn-primary ms-2" style="font-size: 15px;">Candidate Sign-up</a>
+                <a href="#" class="btn btn-primary ms-2" style="font-size: 15px;">Employer Sign-up</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="row">
+        <div class="col">
+           <h1 class="text-center p-3 ">Make your dream career a reality</h1>
+        </div>
+        </div>
+
+        <div class="row">
+           <div class="col">
+               <h2 class="text-center">Trending on WorkReady
+            </h2>
+           </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="{% static 'assets/banner1.png' %}" alt="" width="350px">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'assets/banner2.png' %}" alt="" width="350px">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'assets/banner3.png' %}" alt="" width="350px">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Latest Internships on WorkReady</h2>
+        
+        <!-- Category Tabs -->
+        <ul class="nav nav-pills justify-content-center category-tabs mb-4" id="categoryTab">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#bigBrands">Big Brands</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#workFromHome">Work from Home</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#partTime">Part-time</button></li>
+        </ul>
+        
+        <!-- Internship Slider -->
+        <div id="internshipCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <div class="card p-3 shadow">
+                                <h5>SEO Internship</h5>
+                                <p>Gurgaon | ₹10,000/month | 6 Months</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card p-3 shadow">
+                                <h5>Field Sales</h5>
+                                <p>Indore | ₹20,000/month | 6 Months</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card p-3 shadow">
+                                <h5>Operations</h5>
+                                <p>Gurgaon | ₹15,000/month | 4 Months</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card p-3 shadow">
+                                <h5>Calling Agent</h5>
+                                <p>Bangalore | ₹22,000/month | 6 Months</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#internshipCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#internshipCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+
+        
+    </div>
+
+    
+    <div class="container mt-5">
+        <h2 class="text-center">Latest Jobs on WorkReady</h2>
+        
+        <!-- Category Tabs -->
+        <ul class="nav nav-pills justify-content-center category-tabs mb-4" id="categoryTab">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#bigBrands">Big Brands</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#workFromHome">Work from Home</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#partTime">Part-time</button></li>
+        </ul>
+        
+        <!-- Internship Slider -->
+        <div id="internshipCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <div class="card p-3 shadow">
+                                <h5>SEO Internship</h5>
+                                <p>Gurgaon | ₹10,000/month | 6 Months</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card p-3 shadow">
+                                <h5>Field Sales</h5>
+                                <p>Indore | ₹20,000/month | 6 Months</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card p-3 shadow">
+                                <h5>Operations</h5>
+                                <p>Gurgaon | ₹15,000/month | 4 Months</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card p-3 shadow">
+                                <h5>Calling Agent</h5>
+                                <p>Bangalore | ₹22,000/month | 6 Months</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#internshipCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#internshipCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Placement guarantee courses</h2>
+        <center><span><i class="bi bi-check"></i>Guaranteed placement</span>
+           <span><i class="bi bi-check"></i>Get 100% refund if not hired</span> 
+            <span><i class="bi bi-check"></i>Become job ready</span></center>
+        <div class="row mt-4">
+            <div class="col-lg-3">
+                <div class="card shadow" style="width: 17rem; height: 22rem;">
+                    <img src="{% static 'assets/course1.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Full Stack Development Course</h5>
+                      <span class="card-text ">
+                        <i class="bi bi-clock pe-1"></i>4 months course <br>
+                        <i class="bi bi-currency-rupee pe-1"></i>Get Placed with <i class="bi bi-currency-rupee"></i>3-10LPA Salary<br>
+                        <i class="bi bi-bag-dash pe-1"></i>1.08Lac+ Opportunites <br>
+                      </span>
+                      <a href="#" class="btn btn-outline-primary mt-1">Know more</a>
+                    </div>
+                  </div>                
+            </div>
+            <div class="col-lg-3">
+                <div class="card shadow" style="width: 17rem; height: 22rem;">
+                    <img src="{% static 'assets/course2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Data Science Course</h5>
+                      <span class="card-text ">
+                        <i class="bi bi-clock pe-1"></i>4 months course <br>
+                        <i class="bi bi-currency-rupee pe-1"></i>Get Placed with <i class="bi bi-currency-rupee"></i>3-10LPA Salary<br>
+                        <i class="bi bi-bag-dash pe-1"></i>1.08Lac+ Opportunites <br>
+                      </span>
+                      <a href="#" class="btn btn-outline-primary mt-1">Know more</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card shadow" style="width: 17rem; height: 22rem;">
+                    <img src="{% static 'assets/course3.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Human Resource Management Course</h5>
+                      <span class="card-text ">
+                        <i class="bi bi-clock pe-1"></i>4 months course <br>
+                        <i class="bi bi-currency-rupee pe-1"></i>Get Placed with <i class="bi bi-currency-rupee"></i>3-10LPA Salary<br>
+                        <i class="bi bi-bag-dash pe-1"></i>1.08Lac+ Opportunites <br>
+                      </span>
+                      <a href="#" class="btn btn-outline-primary mt-1">Know more</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card shadow" style="width: 17rem; height: 22rem;">
+                    <img src="{% static 'assets/course4.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Digital Marketing Course</h5>
+                      <span class="card-text ">
+                        <i class="bi bi-clock pe-1"></i>4 months course <br>
+                        <i class="bi bi-currency-rupee pe-1"></i>Get Placed with <i class="bi bi-currency-rupee"></i>3-10LPA Salary<br>
+                        <i class="bi bi-bag-dash pe-1"></i>1.08Lac+ Opportunites <br>
+                      </span>
+                      <a href="#" class="btn btn-outline-primary mt-1">Know more</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+<div class="container mt-5">
+    
+    <div class="row">
+        <h1 class="text-center">Top companies trust us</h1>
+        <img src="{% static 'assets/company.jpg' %}" alt="" width="100%" height="300px">
+    </div>
+    
+    <hr>
+    <div class="row mt-5">
+        <div class="col">
+            <center>
+                <h1 style="font-size: 50px;">300K+</h1>
+                <p class="fs-4">companies hiring</p>
+            </center>
+        </div>
+        <div class="col">
+            <center>
+            <h1 style="font-size: 50px;">10K+</h1>
+            <p class="fs-4">new openings everyday</p>
+        </center>
+        </div>
+        <div class="col">
+             <center>
+                 <h1 style="font-size: 50px;">21Mn+</h1>
+                 <p class="fs-4">active students</p>
+             </center>
+        </div>
+        <div class="col">
+            <center>
+                <h1 style="font-size: 50px;">600K+</h1>
+                <p class="fs-4">learners</p>
+            </center>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="testimonial-slider" class="owl-carousel">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="testimonial-icon">
+                <i class="fa fa-quote-left"></i>
+              </div>
+              <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent bibendum dolor sit amet eros imperdiet, sit amet
+                hendrerit nisi vehicula.
+              </p>
+            </div>
+            <h3 class="title">John</h3>
+            <span class="post">Web Developer</span>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="testimonial-icon">
+                <i class="fa fa-quote-left"></i>
+              </div>
+              <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent bibendum dolor sit amet eros imperdiet, sit amet
+                hendrerit nisi vehicula.
+              </p>
+            </div>
+            <h3 class="title">Kelle</h3>
+            <span class="post">Web Designer</span>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="testimonial-icon">
+                <i class="fa fa-quote-left"></i>
+              </div>
+              <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent bibendum dolor sit amet eros imperdiet, sit amet
+                hendrerit nisi vehicula.
+              </p>
+            </div>
+            <h3 class="title">Steven</h3>
+            <span class="post">Web Developer</span>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="testimonial-icon">
+                <i class="fa fa-quote-left"></i>
+              </div>
+              <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent bibendum dolor sit amet eros imperdiet, sit amet
+                hendrerit nisi vehicula.
+              </p>
+            </div>
+            <h3 class="title">Peter</h3>
+            <span class="post">Web Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+    <div class="container-fluid bg-dark pt-5 mt-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col">
+                    <p class="text-white fw-bold">Internships by places</p>
+                    <ul>
+                        <li class="text-white">Internship in India</li>
+                        <li class="text-white">Internship in Delhi</li>
+                        <li class="text-white">Internship in Bangalore</li>
+                        <li class="text-white">Internship in Hyderabad</li>
+                        <li class="text-white">Internship in Mumbai</li>
+                        <li class="text-white">Virtual Internships</li>
+                        <li class="text-white">View all Internships</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="text-white fw-bold">Internship by Stream</p>
+                    <ul>
+                        <li class="text-white">Computer Science Internship</li>
+                        <li class="text-white">Electronics Internship</li>
+                        <li class="text-white">Mechanical Internship</li>
+                        <li class="text-white">Civil Internship</li>
+                        <li class="text-white">Summer Research Fellowship</li>
+                        <li class="text-white">Campus Ambassador Program</li>
+                        <li class="text-white">View all Internships</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="text-white fw-bold">Jobs by Places</p>
+                    <ul>
+                        <li class="text-white">Jobs in Delhi</li>
+                        <li class="text-white">Jobs in Bangalore</li>
+                        <li class="text-white">Jobs in Mumbai</li>
+                        <li class="text-white">Jobs in Jaipur</li>
+                        <li class="text-white">Jobs in Chennai</li>
+                        <li class="text-white">Jobs in Hyderabad</li>
+                        <li class="text-white">View all Jobs</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <p class="text-white fw-bold">Jobs by Stream</p>
+                    <ul>
+                        <li class="text-white">Marketing jobs</li>
+                        <li class="text-white">Content writing job</li>
+                        <li class="text-white">Web development jobs</li>
+                        <li class="text-white">Computer Science jobs</li>
+                        <li class="text-white">Data Science jobs</li>
+                        <li class="text-white">Graphic Design jobs</li>
+                        <li class="text-white">View all Jobs</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <p class="text-white fw-bold">Placement Guarantee Courses</p>
+                    <ul>
+                        <li class="text-white">Full Stack Development</li>
+                        <li class="text-white">Data Science</li>
+                        <li class="text-white">Human Resource Management</li>
+                        <li class="text-white">Digital Marketing</li>
+                        <li class="text-white">Product Management</li>
+                        <li class="text-white">Supply Chain Logistics</li>
+                        <li class="text-white">Certification Courses OFFER</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr class="text-white">
+      
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="text-white fw-bold">About us</p>
+                    <ul>
+                        <li class="text-white"> We're hiring</li>
+                        <li class="text-white">Hire interns for your company</li>
+                        <li class="text-white">Post a Job</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="text-white fw-bold">Team Diary</p>
+                    <ul>
+                        <li class="text-white">Blog</li>
+                        <li class="text-white">Our Services</li>
+                        <li class="text-white">Free Job Alerts</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="text-white fw-bold">Terms & Conditions</p>
+                    <ul>
+                        <li class="text-white">Privacy</li>
+                        <li class="text-white">Contact us</li>
+                    </ul>
+                </div>
+    
+                <div class="col">
+                    <p class="text-white fw-bold">Sitemap</p>
+                    <ul>
+                        <li class="text-white">College TPO Registration</li>
+                        <li class="text-white">List of Companines</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    
+    </div>
+    <script>
+        $(document).ready(function () {
+          $("#testimonial-slider").owlCarousel({
+            items: 3,
+            itemsDesktop: [1000, 3],
+            itemsDesktopSmall: [980, 2],
+            itemsTablet: [768, 2],
+            itemsMobile: [650, 1],
+            pagination: true,
+            navigation: false,
+            slideSpeed: 1000,
+            autoPlay: true,
+          });
+        });
+      </script>
+         <script
+         type="text/javascript"
+         src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+       ></script>
+       <script
+       type="text/javascript"
+       src="https://code.jquery.com/jquery-1.12.0.min.js"
+     ></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

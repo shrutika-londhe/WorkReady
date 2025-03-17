@@ -3,15 +3,16 @@ import mysql.connector as sql
 
 def signup(request):
     if request.method == 'POST': 
-        obj = sql.connect(host="localhost", user="root", password="system", database="auth")
+        obj = sql.connect(host="localhost", user="root", password="system", database="workready")
         cursor = obj.cursor()
 
-        n = request.POST.get('name', '')
+        fn = request.POST.get('firstname', '')
+        ln= request.POST.get('lastname', '')
         e = request.POST.get('email', '')
         p = request.POST.get('password', '')
 
-        sqlquery = "INSERT INTO users (name, email, password) VALUES (%s, %s, %s)"
-        cursor.execute(sqlquery, (n, e, p))
+        sqlquery = "INSERT INTO users (firstname,lastname, email, password) VALUES (%s, %s, %s, %s)"
+        cursor.execute(sqlquery, (fn,ln, e, p))
         obj.commit()
 
         cursor.close()

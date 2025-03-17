@@ -12,7 +12,7 @@
             margin-top: 30px;
         }
     
-#google-signin {
+/* #google-signin {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-}
+} */
 
 
 
@@ -29,9 +29,10 @@
 </head>
   <body>
       <h1 class="text-center mt-3">Register Here!</h1>
-      <form method="post" class="shadow p-4 w-">
+      <form method="POST" class="shadow p-4 w-">
         {% csrf_token %}
-        <div class="container">
+
+        <!-- <div class="container">
           <div class="row">
           <button id="google-signin" class="p-2">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Logo">
@@ -42,8 +43,8 @@
                data-client_id="YOUR_GOOGLE_CLIENT_ID"
                data-callback="handleCredentialResponse">
           </div>
-      </div>
-      <hr>
+      </div> -->
+      <!-- <hr> -->
    
           <div class="container">
               <div class="row">     
@@ -65,14 +66,14 @@
                   <div class="col-lg">
                         <div class="mb-3">
                           <label for="name" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="name" name="name">
+                            <input type="text" class="form-control" id="firstname" name="firstname">
                         </div>
                   
                   </div>
                    <div class="col-lg">
                     <div class="mb-3">
                       <label for="name" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                        <input type="text" class="form-control" id="lastname" name="lastname">
                     </div>
                   </div>   
               </div>

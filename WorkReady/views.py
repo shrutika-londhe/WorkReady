@@ -4,9 +4,8 @@ import mysql.connector as sql
 def homePage(request):
     return render(request, 'index.html')
 
+def intern(request):
+    return render(request,'internship.html')
 
-def login(request):
-    return render(request, 'login.html')
-
-def signup(request):
-    return render(request, 'signup.html')
+def job(request):
+    return render(request,'job.html')

@@ -38,7 +38,9 @@
 }
 
 
-
+ul li{
+  list-style: none !important;
+}
 
 .testimonial {
     margin: 0 20px 40px;

@@ -18,6 +18,6 @@ def signup(request):
         cursor.close()
         obj.close()
 
-        return render(request, 'signup.html', {'message': 'User registered successfully!'})
+        return render(request, 'login.html', {'message': 'User registered successfully!'})
 
     return render(request, 'signup.html')

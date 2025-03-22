@@ -9,3 +9,6 @@ def intern(request):
 
 def job(request):
     return render(request,'job.html')
+
+def course(request):
+    return render(request,'course.html')

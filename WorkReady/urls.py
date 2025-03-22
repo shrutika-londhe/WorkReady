@@ -21,12 +21,13 @@ from login.views import login
 from signup.views import signup
 from WorkReady.views import intern
 from WorkReady.views import job
-
+from WorkReady.views import course
 
 urlpatterns = [
     path('', homePage),
     path('login',login),
     path('signup',signup),
     path('intern', intern),
-    path('job', job), 
+    path('job', job),
+    path('course',course)
 ]
